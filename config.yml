@@ -1,0 +1,16 @@
+title: MyStep1
+description: 2021.2.6
+template:
+  repo: mystep1-template
+  name: mystep1
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
